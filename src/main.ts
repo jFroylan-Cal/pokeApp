@@ -13,7 +13,7 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
-  await app.listen(3000);
-  console.log('Ya levanto este pedo');
+  await app.listen(process.env.PORT);
+  console.log(`App Running on port ${process.env.PORT}`);
 }
 bootstrap();
